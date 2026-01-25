@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <title> Personal portfolio - Hans-Henrik Hansen </title>
+	  <meta name="description" content="lab2 hand in">
+	  <meta name="author" content="Hans-Henrik Hansen">
+	  
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  
+	  <link rel="stylesheet" href="css/normalize.css">
+	  <link rel="stylesheet" href="css/style.css">
+	  <!-- This is used with direct inspiration from Mehrad Hajati to include logos in my navigation
+	  but instead of using a local font awesome on the server I use a CDN -->
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
+	  integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" 
+	  crossorigin="anonymous"
+	   referrerpolicy="no-referrer" />
+	   
+    </head>
+    <body>
+		<header>
+			<nav class="navigation">
+				<!-- below implementation of navigation is strongly inspired by Mehrads code in index html 
+				in https://github.com/MehradHajati/MehradHajati.github.io/blob/main/index.html -->
+				<!-- <h1 class="pagelogo"> My personal portfolio</h1> -->
+				<ul class="taboverview">
+					<li class="active_tab" title="Home Page"> 
+						<a href="index.html"> 
+							<i class="fa-solid fa-house"></i>Home 
+						</a>
+					</li>
+					<li class="tab" title="Educational background"> 
+						<a href="education.html">
+							<i class="fas fa-graduation-cap"></i>Education
+						</a>
+					</li>
+					<li class="tab" title="Work Experience"> 
+						<a href="work.html">
+							<i class="fas fa-briefcase"></i>Work Experience
+						</a>
+					</li>
+					<li class="tab" title="Project Portfolio"> 
+						<a href="projects.html">
+							<i class="fas fa-folder-open"></i>Project Portfolio
+						</a>
+					</li>
+					<li class="tab" title="Hobbies and Interests"> 
+						<a href="hobbies.html">
+							<i class="fas fa-beer"></i>Hobbies & Interests
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<section class="hero">
+			<div class="hero-overlay">
+				<h1>Hello, I’m Hans</h1>
+				<p class="hero_p1">
+					Data Scientist and Tech Enthusiast
+				</p>
+				<p class="hero_p2">
+					With nearly two years of experience at GN Store Nord, I specialized in automating data workflows and building Power BI reports for their ESG initiatives, 
+					leveraging my deep knowledge of Python, SQL, and advanced Power BI & Fabric. I thrive on challenges and bring a “can do” attitude to every project I tackle.
+				</p>
+				<p class="hero_p2">
+					Outside of data, I’m a homebrewing enthusiast, always experimenting with new flavors and techniques that I hapily share with family and friends.
+				</p>
+			</div>
+			<div class="hero-divider">
+			<svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+				<path
+				d="M0,40 C240,80 480,0 720,20 960,40 1200,80 1440,40 L1440,100 L0,100 Z"
+				fill="#ffffff"
+				/>
+			</svg>
+			</div>
+			</section>
+			<section class="skills">
+			<h2 class="skills-title">Explore my Skills</h2>
+
+			<div class="skills-grid">
+
+				<div class="skill-card">
+				<button class="skill-header">Coding Languages known</button>
+				<div class="skill-content">
+					<ul>
+					<li>Advanced Python User</li>
+					<li>Advanced SQL User</li>
+					<li>HTML, CSS & Javascript for web development</li>
+					<li>DAX</li>
+					<li>M (Power Query) </li>
+					</ul>
+				</div>
+				</div>
+
+				<div class="skill-card">
+				<button class="skill-header">Machine Learning</button>
+				<div class="skill-content">
+					<ul>
+					<li>Supervised & Unsupervised Learning</li>
+					<li>Feature Engineering</li>
+					<li>Model Evaluation</li>
+					<li>Scikit-learn</li>
+					<li>Keras & TensorFlow</li>
+					<li>Predictive Analytics</li>
+					</ul>
+				</div>
+				</div>
+
+				<div class="skill-card">
+				<button class="skill-header">AI</button>
+				<div class="skill-content">
+					<ul>
+					<li>NLP</li>
+					<li>BERT & Transformers</li>
+					<li>LLMs & Prompt Engineering</li>
+					<li>Creating AI agents</li>
+					<li>Claude Code and github repository to optimize performance and reduce prompt-instructions needed </li>
+					</ul>
+				</div>
+				</div>
+				
+				<div class="skill-card">
+				<button class="skill-header">Data Visualization</button>
+				<div class="skill-content">
+					<ul>
+					<li>Power BI Expert</li>
+					<li>Advanced User of Microsoft Fabric</li>
+					<li>Tableau User</li>
+					</ul>
+				</div>
+				</div>
+
+				<div class="skill-card">
+				<button class="skill-header">Data Management & Storage</button>
+				<div class="skill-content">
+					<ul>
+					<li>SQL</li>
+					<li>Data Warehousing</li>
+					<li>ETL Pipelines</li>
+					<li>Lakehouse Architectures</li>
+					<li>Microsoft SQL Server Management Studio</li>
+					<li>PostgreSQL</li>
+					</ul>
+				</div>
+				</div>
+
+				<div class="skill-card">
+				<button class="skill-header">Business Skills</button>
+				<div class="skill-content">
+					<ul>
+					<li>Stakeholder Management & Communication</li>
+					<li>Data Storytelling</li>
+					<li>Requirements Gathering</li>
+					<li>Change Management</li>
+					<li>ESG Reporting</li>
+					<li>Working Strategically with Corporate Sustainability</li>
+					</ul>
+				</div>
+				</div>
+
+				<div class="skill-card">
+				<button class="skill-header">Methodologies</button>
+				<div class="skill-content">
+					<ul>
+					<li>Agile / Scrum</li>
+					</ul>
+				</div>
+				</div>
+
+				<div class="skill-card">
+				<button class="skill-header">DevOps</button>
+				<div class="skill-content">
+					<ul>
+					<li>Git</li>
+					<li>AzureDevOps</li>
+					</ul>
+				</div>
+				</div>
+
+			</div>
+			</section>
+			<footer class="footer">
+			<div class="footer-content">
+
+				<div class="footer-section">
+				<h3>Contact</h3>
+				<p>
+					<a href="mailto:hans.kontakt.hansen@gmail.com">
+					hans.kontakt.hansen@gmail.com
+					</a>
+				</p>
+				</div>
+
+				<div class="footer-section">
+				<h3>Connect</h3>
+				<p>
+					<a 
+					href="https://www.linkedin.com/in/hans-henrik-hansen-216982136/" 
+					target="_blank" 
+					rel="noopener noreferrer"
+					>
+					LinkedIn
+					</a>
+				</p>
+				</div>
+
+			</div>
+
+			<div class="footer-bottom">
+				© 2026 Hans-Henrik Hansen · All rights reserved
+			</div>
+			</footer>
+
+		</main>
+	<script src="js/script.js"></script>
+    </body>

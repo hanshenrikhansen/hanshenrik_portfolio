@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <title> Projects page - personal portfolio </title>
+	  <meta name="description" content="lab2 hand in">
+	  <meta name="author" content="Hans-Henrik Hansen">
+	  
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  
+	  <link rel="stylesheet" href="css/normalize.css">
+	  <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
+	  integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" 
+	  crossorigin="anonymous"
+	   referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+		<header>
+			<nav class="navigation">
+				<!-- below implementation of navigation is strongly inspired by Mehrads code in index html 
+				in https://github.com/MehradHajati/MehradHajati.github.io/blob/main/index.html -->
+				<ul class="taboverview">
+					<li class="tab" title="Home Page"> 
+						<a href="index.html"> 
+							<i class="fa-solid fa-house"></i>Home 
+						</a>
+					</li>
+					<li class="tab" title="Educational background"> 
+						<a href="education.html">
+							<i class="fas fa-graduation-cap"></i>Education
+						</a>
+					</li>
+					<li class="tab" title="Work Experience"> 
+						<a href="work.html">
+							<i class="fas fa-briefcase"></i>Work Experience
+						</a>
+					</li>
+						<li class="active_tab" title="Project Portfolio"> 
+						<a href="projects.html">
+							<i class="fas fa-folder-open"></i>Project Portfolio
+						</a>
+					</li>
+					<li class="tab" title="Hobbies and Interests"> 
+						<a href="hobbies.html">
+							<i class="fas fa-beer"></i>Hobbies & Interests
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+<section class="projects-hero">
+  <div class="projects-hero-content">
+    <h1>Projects I’m Proud to Share</h1>
+    <div class="hero-underline"></div>
+    <p>
+      These projects represent the work I’ve learned the most from — combining data science,
+      machine learning, and real-world problem solving.
+      Scroll through the carousel to explore each project and find links to their GitHub repositories.
+    </p>
+  </div>
+</section>
+
+
+
+
+<section class="projects-section">
+
+  <button class="projects-arrow left" aria-label="Previous">&#10094;</button>
+
+  <div class="projects-container" id="projectsContainer">
+	<div class="project-card" data-modal="project-webpage" data-image="webpage.png">
+      <div class="project-overlay">
+        <h3>Personal Portfolio Webpage</h3>
+        <p>This project contains the full code repository for my personal portfolio webpage that you are currently viewing. </p>
+        <a href="https://github.com/hanshenrikhansen/Personal-Portfolio-Webpage" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+
+	<div class="project-card" data-modal="project-dog" data-image="dog.png">
+      <div class="project-overlay">
+        <h3>Dog Breed Rating App</h3>
+        <p>API-driven Python application.</p>
+        <a href="https://github.com/hanshenrikhansen/Dog-Rater-App" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+
+    <div class="project-card" data-modal="project-fakenews" data-image="fakenews.png">
+      <div class="project-overlay">
+        <h3>Fake News Detection</h3>
+        <p>BERT-based NLP model for Twitter misinformation.</p>
+        <a href="https://github.com/hanshenrikhansen/Fake-News-Detection-on-Twitter" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+
+    <div class="project-card" data-modal="project-esg" data-image="esg.png">
+      <div class="project-overlay">
+        <h3>Student Dropout Prediction</h3>
+        <p>Setting up- and optimizing machine learning models in order to achieve best performance for predicting student dropouts</p>
+        <a href="https://github.com/hanshenrikhansen/StudentDropoutPrediction" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+
+    <div class="project-card" data-modal="project-dog-2" data-image="nextword.png">
+      <div class="project-overlay">
+        <h3>Comparative study of next word predictors</h3>
+        <p>This study compares three approaches, statistical N-gram models, LSTM networks, and pretrained GPT-2 transformers, using a Wikipedia-derived corpus.</p>
+        <a href="https://github.com/hanshenrikhansen/Comparative-study-of-next-word-predictors/tree/main" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+
+	<div class="project-card" data-modal="project-goldprice" data-image="goldprice.png">
+      <div class="project-overlay">
+        <h3>Gold Price Prediction</h3>
+        <p>This paper examines the ability of time series models to forecast weekly gold prices using the SPDR Gold Trust ETF (GLD) as a proxy.  </p>
+        <a href="https://github.com/hanshenrikhansen/Gold-Forecasting-using-Predictive-Analytics" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="projects-arrow right" aria-label="Next">&#10095;</button>
+
+</section>
+
+
+	<!-- Dots container -->
+<div class="projects-dots" id="projectsDots"></div>
+
+<!-- Modal -->
+<div class="project-modal-overlay" id="projectModal">
+  <div class="project-modal">
+    <button class="project-modal-close" aria-label="Close">&times;</button>
+    <div class="project-modal-body"></div>
+  </div>
+</div>
+
+
+        <footer class="footer">
+			<div class="footer-content">
+
+				<div class="footer-section">
+				<h3>Contact</h3>
+				<p>
+					<a href="mailto:hans.kontakt.hansen@gmail.com">
+					hans.kontakt.hansen@gmail.com
+					</a>
+				</p>
+				</div>
+
+				<div class="footer-section">
+				<h3>Connect</h3>
+				<p>
+					<a 
+					href="https://www.linkedin.com/in/hans-henrik-hansen-216982136/" 
+					target="_blank" 
+					rel="noopener noreferrer"
+					>
+					LinkedIn
+					</a>
+				</p>
+				</div>
+
+			</div>
+
+			<div class="footer-bottom">
+				© 2026 Hans-Henrik Hansen · All rights reserved
+			</div>
+			</footer>
+
+		<script src="js/script_projects.js"></script>
+    </body>
