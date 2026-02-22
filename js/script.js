@@ -4,15 +4,28 @@ skillCards.forEach(card => {
   const header = card.querySelector(".skill-header");
   const content = card.querySelector(".skill-content");
 
+  // store the default text (for skills vs chat)
+  header.dataset.defaultText = header.textContent;
+
   header.addEventListener("click", () => {
-    if (card.classList.contains("active")) {
+    const isActive = card.classList.contains("active");
+
+    if (isActive) {
       // collapse
       content.style.maxHeight = null;
       card.classList.remove("active");
+
+      // reset header text
+      header.textContent = header.dataset.defaultText;
     } else {
       // expand
       content.style.maxHeight = content.scrollHeight + "px";
       card.classList.add("active");
+
+      // if this is the chat card, toggle text
+      if (card.classList.contains("chat-card")) {
+        header.textContent = "Close Chat";
+      }
     }
   });
 });
@@ -197,5 +210,3 @@ function closeModal() {
   modal.classList.remove("active");
   document.body.style.overflow = "";
 }
-
-
