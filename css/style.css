@@ -1636,3 +1636,35 @@ ul.taboverview li {
   margin: 0 auto 20px;   /* center horizontally, spacing below */
   border-radius: 2px;
 }
+
+
+/* ==================== HERO MOBILE ADJUSTMENTS ==================== */
+@media (max-width: 768px) {
+  /* Make overlay cover full width and more of the hero height */
+  .hero-overlay {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: rgba(31, 42, 54, 0.75); /* slightly darker overlay for readability */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertically center text */
+  }
+
+  /* Scale the main heading */
+  .hero-overlay h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  /* Scale subheading and paragraphs */
+  .hero-overlay .hero_p1 {
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+
+  .hero-overlay .hero_p2 {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}
