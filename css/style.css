@@ -51,7 +51,7 @@ ul.taboverview li a {
   padding: 15px 20px;
   border-radius: 8px;
   width: 85%;
-  height: 15px;
+  height: auto;
   font-weight: 700;
 }
 
@@ -1014,43 +1014,6 @@ ul.taboverview li {
   color: #6a6a6a;
 }
 
-/* ==================== MOBILE FALLBACK ==================== */
-@media (max-width: 900px) {
-  .work-timeline::before {
-    left: 30px;
-  }
-
-  .work-item {
-    width: 100%;
-    left: 0 !important;
-    padding-left: 80px;
-    padding-right: 20px;
-    text-align: left !important;
-  }
-
-  .work-left {
-    left: 30px !important;
-    transform: translateX(-50%);
-  }
-
-  .work-item:hover {
-    transform: none;
-  }
-}
-
-
-/* ==================== RESPONSIVE ==================== */
-@media (max-width: 700px) {
-  .work-right {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .work-year {
-    left: -55px;
-    font-size: 0.8rem;
-  }
-}
 
 
 /* ==================== HERO ==================== */
@@ -1498,5 +1461,102 @@ ul.taboverview li {
 
   .hobby-feature {
     padding: 40px 30px;
+  }
+}
+
+/* ============= mobile fixes ==============*/
+@media (max-width: 700px) {
+
+  /* Move the vertical line to the left */
+  .education-timeline::before,
+  .work-timeline::before {
+    left: 30px;
+    top: 0;
+    bottom: 0;
+  }
+
+  /* Stack all items full width, left aligned */
+  .education-item,
+  .education-item:nth-child(odd),
+  .education-item:nth-child(even) {
+    left: 0 !important;
+    width: 100%;
+    text-align: left !important;
+    padding-left: 70px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+  }
+
+  /* Pin education-left (contains dot + year) to the left line */
+  .education-item .education-left,
+  .education-item:nth-child(odd) .education-left,
+  .education-item:nth-child(even) .education-left {
+    position: absolute;
+    left: 24px !important;   /* centers the 14px dot on the 30px line */
+    top: 0;
+    transform: none !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  /* Year sits above the dot, no longer absolute */
+  .education-year,
+  .work-year {
+    position: static !important;
+    transform: none !important;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    left: auto !important;
+    right: auto !important;
+  }
+
+  /* Stack logo and text vertically */
+  .education-right {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .education-right img {
+    width: 70px;
+    margin-bottom: 8px;
+  }
+
+  /* ── Work timeline ── */
+  .work-item,
+  .work-item:nth-child(odd),
+  .work-item:nth-child(even) {
+    left: 0 !important;
+    width: 100%;
+    text-align: left !important;
+    padding-left: 70px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+  }
+
+  .work-item .work-left,
+  .work-item:nth-child(odd) .work-left,
+  .work-item:nth-child(even) .work-left {
+    position: absolute;
+    left: 24px !important;
+    top: 0;
+    transform: none !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .work-right {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .work-right img {
+    width: 70px;
+    margin-bottom: 8px;
   }
 }
